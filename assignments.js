@@ -1,74 +1,95 @@
+// 'use strict';
 
-// const country = "Argentina";
-// const continent = "South America";
-// let population = 46;
-// console.log(typeof country);
-// // console.log(continent);
-// console.log(typeof population);
+// function describeCountry(country, population, capitalCity) {
+//     return `${country} has ${population} million people and its capital city is ${capitalCity}`;
+// }
 
+// const country1 = describeCountry('Argentina', 46, 'Buenos Aires');
+// const country2 = describeCountry('Morocco', 34, 'Marrakech');
+// const country3 = describeCountry('France', 69, 'Paris');
 
-// const isIsland = false;
-// let language = 'spanish';
+// console.log(country1);
+// console.log(country2);
+// console.log(country3);
 
-// console.log(typeof isIsland);
-// console.log(typeof language);
+// console.log('Using a function declaration');
+// function percentageOfWorld1(population) {
+//     return (population / 7900) * 100;
+// }
 
-// console.log(population / 2);
-// population++;
-// console.log(population);
+// const population1 = percentageOfWorld1(46);
+// const population2 = percentageOfWorld1(34);
+// const population3 = percentageOfWorld1(69);
 
-// const finland = 6;
-// console.log(population > finland);
-// let avgPop = 33;
-// console.log(population < avgPop);
+// console.log(population1);
+// console.log(population2);
+// console.log(population3);
 
-// const description = country + " is in " + continent + ", and its " + population + " million people speak " + language;
-// console.log(description);
+// console.log('Using a funtion expression');
+// const percentageOfWorld2 = function (population) {
+//     return (population / 7900) * 100;
+// }
 
-// const descriptionNew = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
-// console.log(descriptionNew);
+// console.log(percentageOfWorld2(46));
+// console.log(percentageOfWorld2(34));
+// console.log(percentageOfWorld2(69));
 
-// if (population > avgPop) {
-//     console.log(`${country}'s population is above average`);
+// console.log('Using an arrow function');
+// const percentageOfWorld3 = population => (population / 7900) * 100;
+
+// console.log(percentageOfWorld3(46));
+// console.log(percentageOfWorld3(34));
+// console.log(percentageOfWorld3(69));
+
+// function describePopulation(country, population) {
+//     const percentage = percentageOfWorld1(population)
+//     return `${country} has ${population} million people, which is about ${percentage}% of the world`;
+// }
+
+// console.log(describePopulation('Argentina', 46));
+// console.log(describePopulation('Morocco', 34));
+// console.log(describePopulation('France', 69));
+
+// const populations = [46, 34, 69, 80];
+
+// console.log(`${populations.length === 4 ? true : false}`);
+// const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
+// console.log(percentages);
+
+// const neighbours = ['Portugal', 'France', 'Italy'];
+// neighbours.push('Utopia');
+// neighbours.pop();
+
+// if (neighbours.includes('Germany')) {
+//     console.log('You probably choose a country in central Europe');
 // } else {
-//     console.log(`${country}'s population is ${avgPop - population} million below average`);
+//     console.log('Probably not a central European country')
 // }
 
-// // const numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
-// // if (numNeighbours === 1) {
-// //     console.log("Only 1 border!");
-// // } else if (numNeighbours > 1) {
-// //     console.log("More than one border!");
-// // }
-// // else if (numNeighbours === 0) {
-// //     console.log("No borders");
-// // }
+// console.log(neighbours.indexOf('France'));
+// neighbours[1] = 'Deutschland'
+// console.log(neighbours);
 
-// if (language === 'spanish' && population < 50 && !isIsland) {
-//     console.log('You should live in Argentina :)');
-// } else {
-//     console.log('Argentina does not meet your criteria :(');
-// }
+// const myCountry = {
+//     country: 'Argentina',
+//     capitol: 'Buenos Aires',
+//     language: 'Spanish',
+//     population: 46,
+//     neighbours: ['Uruguay', 'Paraguay', 'Brazil'],
+//     describe: function () {
+//         console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capitol named ${this.capitol}`);
+//     },
+//     checkIsland: function () {
+//         console.log(neighbours.length === 0 ? true : false);
+//     }
+// };
 
-// switch (language) {
-//     case 'mandarin':
-//         console.log('MOST number of native speakers!');
-//         break;
-//     case 'spanish':
-//         console.log('2nd place in number of native speakers');
-//         break;
-//     case 'english':
-//         console.log('3rd place');
-//         break;
-//     case 'hindi':
-//         console.log('Number 4');
-//         break;
-//     case 'arabic':
-//         console.log('5th most spoken language');
-//         break;
-//     default:
-//         console.log('Great language too :)');
-//         break;
-// }
+// console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capitol named ${myCountry.capitol}`);
 
-// population >= 33 ? console.log("Argentina's population is above average") : console.log("Argentina's population is below average")
+// myCountry.population += 2;
+// console.log(myCountry.population);
+// myCountry['population'] -= 2;
+// console.log(myCountry.population);
+
+// myCountry.describe();
+// myCountry.checkIsland();
